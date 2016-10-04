@@ -1,2 +1,4 @@
 # Asana Tasker
-Coming soon...
+[Insert project description here]
+## Required dependencies
+

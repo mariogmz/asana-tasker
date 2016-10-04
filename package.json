@@ -1,0 +1,31 @@
+{
+  "name": "asana-tasker",
+  "version": "1.0.0",
+  "description": "Little ASANA API client made with React+Redux and a lot of love <3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariogmz/asana-tasker.git"
+  },
+  "keywords": [
+    "asana",
+    "react",
+    "redux",
+    "node",
+    "javascript"
+  ],
+  "author": "Mario Gomez <mariogomezmtz@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariogmz/asana-tasker/issues"
+  },
+  "homepage": "https://github.com/mariogmz/asana-tasker#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
