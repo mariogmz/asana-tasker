@@ -5,11 +5,23 @@ class Tasker extends React.Component {
     super();
   }
   componentWillMount() {
-
+    this.props.fetchTasksAsync();
+  }
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.tasks !== this.props.tasks) {
+      this.props.fetchTasksAsync();
+    }
+  }
+  renderTask(task) {
+    return (
+      <li key={task.id}>{task.name}</li>
+    );
   }
   render(){
     return (
-      <h1>Hello</h1>
+      <ul>
+        {this.props.tasks.map(this.renderTask)}
+      </ul>
     );
   }
 }

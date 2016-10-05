@@ -1,10 +1,9 @@
 function fetchTasks(state = [], action) {
   switch (action.type) {
     case 'FETCH_TASKS':
-      // CALL API
-      return state;
+      return action.tasks;
     default:
-    return state;
+      return state;
   }
 }
 

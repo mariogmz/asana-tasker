@@ -17,8 +17,7 @@ class AsanaClient {
         workspace: this.workspace.id,
         opt_fields: 'id,name,assignee_status,completed'
       });
-    })
-    .then((collection) => {debugger;collection.data;});
+    });
   }
 }
 
