@@ -20,7 +20,7 @@ npm install && npm start
 ```
 This will install all the required dependencies and will run `node devServer.js` through the `npm start` command.
 
-Open http://localhost:3333/ in the browser you most like, and I wish you like Google Chrome as I do, and... voila!
+Open ![http://localhost:3333/](http://localhost:3333/) in the browser you most like, and I wish you like Google Chrome as I do, and... voila!
 
 ## Final Thoughts
 This was exciting to build, because everything was almost new for me, I had to research and study key concepts like crazy:
