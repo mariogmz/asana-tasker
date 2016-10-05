@@ -1,9 +1,8 @@
 .task_row {
-  background-color: $eastern-blue;
   color: $ebb;
   display: table;
   height: 5rem;
-  font-size: 2.2rem;
+  width: 100%;
 
   input[type="checkbox"], &-name {
     cursor: pointer;
@@ -25,12 +24,11 @@
   }
 
   &-index {
-    width: 20vw;
+    width: 20%;
   }
 
   &-name {
-    width: 80vw;
+    width: 80%;
   }
-
 
 }
