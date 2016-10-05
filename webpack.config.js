@@ -28,7 +28,17 @@ module.exports = {
         test: /\.scss$/,
         include: path.join(__dirname,'app/scss'),
         loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.json$/, 
+        loader: 'json'
       }
     ]
+  },
+  node: {
+    readline: 'empty'
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.json', '.scss']
   }
 }
