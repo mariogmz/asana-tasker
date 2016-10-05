@@ -1,0 +1,34 @@
+.task_row {
+  color: $ebb;
+  display: table;
+  height: 5rem;
+  width: 100%;
+
+  input[type="checkbox"], &-name {
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $blumine;
+  }
+
+  &.active {
+    background-color: $blumine;
+  }
+
+  &-index, &-name {
+    border-left: 1px solid $wafer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &-index {
+    width: 20%;
+  }
+
+  &-name {
+    width: 80%;
+  }
+
+}
