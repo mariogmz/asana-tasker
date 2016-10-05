@@ -4,11 +4,15 @@ class TaskRow extends React.Component {
   constructor() {
     super();
     this.markAsComplete = this.markAsComplete.bind(this);
+    this.requestInfo = this.requestInfo.bind(this);
   }
   markAsComplete(e) {
     e.stopPropagation();
     const {index, id} = this.props;
     this.props.toggleTaskAsync(index, id, !this.props.completed);
+  }
+  requestInfo(e) {
+    this.props.requestInfoAsync(this.props.id);
   }
   render() {
     return (
@@ -24,7 +28,7 @@ class TaskRow extends React.Component {
               onChange={this.markAsComplete}/>
           </label>
         </div>
-        <div className="task_row-name">{this.props.children}</div>
+        <div className="task_row-name" onClick={this.requestInfo}>{this.props.children}</div>
       </div>
     );
   }

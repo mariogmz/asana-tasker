@@ -1,10 +1,13 @@
 .task_row {
   background-color: $eastern-blue;
   color: $ebb;
-  cursor: pointer;
   display: table;
   height: 5rem;
   width: 100%;
+
+  input[type="checkbox"], &-name {
+    cursor: pointer;
+  }
 
   &:hover {
     background-color: $blumine;

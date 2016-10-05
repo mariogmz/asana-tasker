@@ -7,6 +7,8 @@ function fetchTasks(state = [], action) {
       let toggledTask = state[i];
       toggledTask.completed = !toggledTask.completed;
       return [...state.slice(0, i), toggledTask, ...state.slice(i + 1)];
+    case 'REQUEST_INFO':
+      return state;
     default:
       return state;
   }
