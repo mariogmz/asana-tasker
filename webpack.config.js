@@ -1,18 +1,21 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: {
-    app: ['./app/app']
-  },
+  devtool: 'source-map',
+  entry: [
+    'webpack-hot-middleware/client',
+    './app/app'
+  ],
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
-  devServer: {
-    inline: true,
-    port: 3333
-  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
   module: {
     loaders: [
       {
@@ -30,7 +33,7 @@ module.exports = {
         loaders: ['style', 'css', 'sass']
       },
       {
-        test: /\.json$/, 
+        test: /\.json$/,
         loader: 'json'
       }
     ]
