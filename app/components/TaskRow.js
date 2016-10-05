@@ -8,7 +8,7 @@ class TaskRow extends React.Component {
   markAsComplete(e) {
     e.stopPropagation();
     const {index, id} = this.props;
-    this.props.toggleTask(index, id);
+    this.props.toggleTaskAsync(index, id, !this.props.completed);
   }
   render() {
     return (
@@ -21,7 +21,7 @@ class TaskRow extends React.Component {
               ref="checkbox"
               className="task_row-index--checkbox"
               checked={this.props.completed}
-              onClick={this.markAsComplete}/>
+              onChange={this.markAsComplete}/>
           </label>
         </div>
         <div className="task_row-name">{this.props.children}</div>

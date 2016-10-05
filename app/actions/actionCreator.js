@@ -16,10 +16,19 @@ export function fetchTasksAsync() {
   }
 }
 
-export function toggleTask(index, id) {
+function toggleTask(index, id) {
   return {
     type: 'TOGGLE_TASK',
     index,
     id
   };
+}
+
+export function toggleTaskAsync(index, id, markAs) {
+  return function(dispatch) {
+    let client = new AsanaClient();
+    return client.updateTask(id, markAs)
+      .then((response) => dispatch(toggleTask(index, response.id)))
+      .catch(() => dispatch(toggleTask()));
+  }
 }
