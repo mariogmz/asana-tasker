@@ -19,7 +19,7 @@ class TaskRow extends React.Component {
       <div className={'task_row ' + (this.props.active?'active':'')}
         data-asana-id={this.props.id}>
         <div className="task_row-index">
-          <label htmlFor={this.props.id}>#{this.props.index + 1}
+          <label htmlFor={this.props.id}>
             <input type="checkbox"
               id={this.props.id}
               ref="checkbox"

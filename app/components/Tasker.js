@@ -1,5 +1,6 @@
 import React from 'react';
 import TaskList from './TaskList';
+import TaskContent from './TaskContent';
 
 class Tasker extends React.Component {
   constructor() {
@@ -10,7 +11,10 @@ class Tasker extends React.Component {
   }
   render(){
     return (
-      <TaskList {...this.props}/>
+      <div className="tasker">
+        <TaskList {...this.props}/>
+        <TaskContent task={this.props.info}/>
+      </div>
     );
   }
 }
