@@ -3,12 +3,12 @@ import thunk from 'redux-thunk';
 
 // Root reducer
 import rootReducer from './reducers/root';
-import AsanaClient from './services/Asana';
 
 const tasks = [];
+const info = {};
 
 // Base state
-const defaultState = {tasks};
+const defaultState = {tasks, info};
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

@@ -5,7 +5,8 @@ import Tasker from './Tasker';
 
 function mapStateToProps(state) {
   return {
-    tasks: state.tasks
+    tasks: state.tasks,
+    info: state.info
   };
 }
 

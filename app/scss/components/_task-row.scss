@@ -1,5 +1,4 @@
 .task_row {
-  background-color: $eastern-blue;
   color: $ebb;
   display: table;
   height: 5rem;
@@ -10,6 +9,10 @@
   }
 
   &:hover {
+    background-color: $blumine;
+  }
+
+  &.active {
     background-color: $blumine;
   }
 
@@ -27,6 +30,5 @@
   &-name {
     width: 80%;
   }
-
 
 }
