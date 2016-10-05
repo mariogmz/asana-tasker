@@ -45,6 +45,6 @@ export function requestInfoAsync(id) {
     let client = new AsanaClient();
     return client.taskInfo(id)
       .then((task) => dispatch(requestInfo(task)))
-      .catch(() => dispatch(requestInfo(info)));
+      .catch((response) => response);
   }
 }

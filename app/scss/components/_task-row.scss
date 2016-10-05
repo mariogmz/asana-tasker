@@ -13,6 +13,10 @@
     background-color: $blumine;
   }
 
+  &.active {
+    background-color: $blumine;
+  }
+
   &-index, &-name {
     border-left: 1px solid $wafer;
     display: table-cell;
