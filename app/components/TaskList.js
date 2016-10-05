@@ -10,7 +10,8 @@ class TaskList extends React.Component {
     return (
       <TaskRow key={task.id} index={index} id={task.id}
         completed={task.completed}
-        toggleTaskAsync={this.props.toggleTaskAsync}>{task.name}</TaskRow>
+        toggleTaskAsync={this.props.toggleTaskAsync}
+        requestInfoAsync={this.props.requestInfoAsync}>{task.name}</TaskRow>
     );
   }
   render() {

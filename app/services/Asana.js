@@ -21,9 +21,12 @@ class AsanaClient {
   }
   updateTask(id, markAs) {
     return this.client.authorize()
-      .then((client) => {
-        return client.tasks.update(id, {completed: markAs})
-      });
+      .then((client) => client.tasks.update(id, {completed: markAs}));
+  }
+  taskInfo(id) {
+
+    return this.client.authorize()
+      .then((client) => client.tasks.findById(id));
   }
 }
 

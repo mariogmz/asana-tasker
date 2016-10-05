@@ -32,3 +32,19 @@ export function toggleTaskAsync(index, id, markAs) {
       .catch(() => dispatch(toggleTask()));
   }
 }
+
+function requestInfo(task) {
+  return {
+    type: 'REQUEST_INFO',
+    task
+  };
+}
+
+export function requestInfoAsync(id) {
+  return function(dispatch) {
+    let client = new AsanaClient();
+    return client.taskInfo(id)
+      .then((task) => dispatch(requestInfo(task)))
+      .catch(() => dispatch(requestInfo(info)));
+  }
+}
