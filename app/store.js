@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/root';
 import AsanaClient from './services/Asana';
 
-const tasks = AsanaClient.getTasks();
+const tasks = [];
 
 // Base state
 const defaultState = {tasks};
