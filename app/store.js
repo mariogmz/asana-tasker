@@ -10,11 +10,9 @@ const tasks = [];
 // Base state
 const defaultState = {tasks};
 
-const enhancers = compose(
-  window.devToolsExtension ? window.devToolsExtension() : f => f
-);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // Store
-const store = createStore(rootReducer, defaultState, enhancers, applyMiddleware(thunk));
+const store = createStore(rootReducer, defaultState, composeEnhancers(applyMiddleware(thunk)));
 
 export default store;
