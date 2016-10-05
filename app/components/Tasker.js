@@ -1,11 +1,17 @@
 import React from 'react'
 
-const Tasker = React.createClass({
-  render () {
+class Tasker extends React.Component {
+  constructor() {
+    super();
+  }
+  componentWillMount() {
+
+  }
+  render(){
     return (
-      <div>Hello</div>
+      <h1>Hello</h1>
     );
   }
-})
+}
 
 export default Tasker;

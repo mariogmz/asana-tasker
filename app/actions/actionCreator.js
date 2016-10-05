@@ -1,5 +1,5 @@
-function getTasks() {
+export function fetchTasks() {
   return {
-    type: 'GET_TASKS'
+    type: 'FETCH_TASKS'
   }
 }
