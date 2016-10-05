@@ -1,0 +1,28 @@
+.task_content {
+  background-color: $kelp;
+  color: $ebb;
+  font-size: 3rem;
+  height: 50vh;
+  padding: 5%;
+
+  &-title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &-notes {
+    text-align: justify;
+  }
+
+  &-details {
+    text-align: right;
+  }
+
+  @media screen and (min-width: 992px){
+    display: table-cell;
+    height: 100vh;
+    font-size: 1.5rem;
+    width: 60%;
+  }
+
+}
