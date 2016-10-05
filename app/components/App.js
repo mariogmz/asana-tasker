@@ -4,7 +4,9 @@ import * as actionCreators from '../actions/actionCreator';
 import Tasker from './Tasker';
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    tasks: state.tasks
+  };
 }
 
 function mapDispatchToProps(dispatch) {
