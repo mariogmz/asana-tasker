@@ -2,8 +2,11 @@ function fetchTasks(state = [], action) {
   switch (action.type) {
     case 'FETCH_TASKS':
       return action.tasks;
-    case 'COMPLETE_TASK':
-      return state;
+    case 'TOGGLE_TASK':
+      const i = action.index;
+      let toggledTask = state[i];
+      toggledTask.completed = !toggledTask.completed;
+      return [...state.slice(0, i), toggledTask, ...state.slice(i + 1)];
     default:
       return state;
   }

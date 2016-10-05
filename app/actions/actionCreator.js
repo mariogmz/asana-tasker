@@ -16,10 +16,10 @@ export function fetchTasksAsync() {
   }
 }
 
-export function completeTask(taskIndex, taskId) {
+export function toggleTask(index, id) {
   return {
-    type: 'COMPLETE_TASK',
-    taskIndex,
-    taskId
+    type: 'TOGGLE_TASK',
+    index,
+    id
   };
 }
