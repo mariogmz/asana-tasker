@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import TaskList from './TaskList';
 
 class Tasker extends React.Component {
   constructor() {
@@ -7,21 +8,9 @@ class Tasker extends React.Component {
   componentWillMount() {
     this.props.fetchTasksAsync();
   }
-  componentWillReceiveProps(nextProps) {
-    if(nextProps.tasks !== this.props.tasks) {
-      this.props.fetchTasksAsync();
-    }
-  }
-  renderTask(task) {
-    return (
-      <li key={task.id}>{task.name}</li>
-    );
-  }
   render(){
     return (
-      <ul>
-        {this.props.tasks.map(this.renderTask)}
-      </ul>
+      <TaskList {...this.props}/>
     );
   }
 }
