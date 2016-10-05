@@ -1,0 +1,26 @@
+.task_row {
+  background-color: $eastern-blue;
+  color: $ebb;
+  display: table;
+  height: 5rem;
+  width: 100%;
+
+  &:hover {
+    background-color: $blumine;
+  }
+
+  &-index, &-name {
+    border-left: 1px solid $wafer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &-index {
+    width: 20%;
+  }
+
+  &-name {
+    width: 80%;
+  }
+}
