@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import TaskRow from './TaskRow';
 
 class Tasker extends React.Component {
   constructor() {
@@ -12,9 +13,9 @@ class Tasker extends React.Component {
       this.props.fetchTasksAsync();
     }
   }
-  renderTask(task) {
+  renderTask(task, index) {
     return (
-      <li key={task.id}>{task.name}</li>
+      <TaskRow key={task.id} index={index + 1} {...task}/>
     );
   }
   render(){
