@@ -15,3 +15,11 @@ export function fetchTasksAsync() {
       .catch(() => dispatch(fetchTasks([])));
   }
 }
+
+export function completeTask(taskIndex, taskId) {
+  return {
+    type: 'COMPLETE_TASK',
+    taskIndex,
+    taskId
+  };
+}
