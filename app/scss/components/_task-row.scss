@@ -4,7 +4,6 @@
   display: table;
   height: 5rem;
   font-size: 2.2rem;
-  width: 100%;
 
   input[type="checkbox"], &-name {
     cursor: pointer;
@@ -26,11 +25,11 @@
   }
 
   &-index {
-    width: 20%;
+    width: 20vw;
   }
 
   &-name {
-    width: 80%;
+    width: 80vw;
   }
 
 
